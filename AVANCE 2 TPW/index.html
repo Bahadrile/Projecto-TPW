@@ -68,7 +68,7 @@
                             <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=600&q=80" alt="Suspensión de competición">
                         </div>
                         <div class="img-box sub-img">
-                            <img src="https://carroemotos.com.br/wp-content/uploads/2024/07/zx102.jpg" alt="Equipamiento y casco AGV">
+                            <img src="motochamo.jpg" alt="Equipamiento y casco AGV">
                         </div>
                     </div>
                 </div>
@@ -208,6 +208,7 @@
     </main>
 
     <!-- VENTANA FLOTANTE (MODAL DETALLE) -->
+    <!-- VENTANA FLOTANTE (MODAL DETALLE) -->
     <div id="modal-detalle" class="modal">
         <div class="modal-contenido">
             <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
@@ -217,14 +218,16 @@
                 <div class="modal-specs-box">
                     <h3>Ficha Técnica Detallada</h3>
                     <p><strong>Motor:</strong> <span id="modal-motor">-</span></p>
+                    <p><strong>Rendimiento:</strong> <span id="modal-rendimiento">-</span></p>
+                    <p><strong>Colores Disponibles:</strong> <span id="modal-colores">-</span></p>
                     <p><strong>Frenos:</strong> <span id="modal-frenos">-</span></p>
                     <p><strong>Suspensión:</strong> <span id="modal-suspension">-</span></p>
-                    <p><strong>Rendimiento:</strong> <span id="modal-rendimiento">-</span></p>
                     <p><strong>Transmisión:</strong> <span id="modal-transmision">-</span></p>
                 </div>
                 <div class="modal-precio-box">
                     <small>Precio Oficial</small>
-                    <h2 id="modal-precio" style="color: #ccff00; font-size: 28px;">S/ 0.00</h2>
+                    <h2 id="modal-precio" style="color: #c8102e; font-size: 28px;">S/ 0.00</h2>
+                    <!-- Al hacer clic cierra el modal y salta automáticamente al formulario de contacto -->
                     <a href="#contacto" onclick="cerrarModal()" class="boton-acento" style="display:block; text-align:center; margin-top:20px;">COTIZAR AHORA</a>
                 </div>
             </div>
@@ -281,56 +284,57 @@
         </div>
     </footer>
 
-    <!-- SCRIPT JS -->
+    <!-- SCRIPT JS ACTUALIZADO CON IMÁGENES PARA CADA MODELO -->
+    
     <script>
         const baseDatosMotos = {
             "full-chamba": [
-                {nombre: "TVS Sport 100", motor: "99.2 cc 4 tiempos", frenos: "Tambor delantero y trasero", suspension: "Telescópica hidráulica", rendimiento: "220 km/galón", transmision: "4 velocidades", precio: "S/ 4,599"},
-                {nombre: "Bajaj Boxer 150", motor: "144.8 cc monocilíndrico", frenos: "Tambor CBS", suspension: "Doble amortiguador SNS", rendimiento: "180 km/galón", transmision: "5 velocidades", precio: "S/ 5,299"},
-                {nombre: "Honda CB125F", motor: "124 cc refrigerado por aire", frenos: "Disco del / Tambor tras", suspension: "Horquilla telescópica", rendimiento: "200 km/galón", transmision: "5 velocidades", precio: "S/ 6,100"},
-                {nombre: "Hero Eco 150", motor: "149.2 cc OHC", frenos: "Tambor alto rendimiento", suspension: "Doble amortiguador", rendimiento: "175 km/galón", transmision: "5 velocidades", precio: "S/ 4,899"},
-                {nombre: "Wanxin Work 125", motor: "125 cc de carga", frenos: "Tambor reforzado", suspension: "Eje de carga pesada", rendimiento: "160 km/galón", transmision: "4 velocidades", precio: "S/ 3,999"},
-                {nombre: "Suzuki AX4", motor: "113 cc 4 tiempos", frenos: "Tambor mecánico", suspension: "Convencional suave", rendimiento: "150 km/galón", transmision: "4 velocidades", precio: "S/ 4,200"}
+                {nombre: "TVS Sport 100", motor: "99.2 cc 4 tiempos", rendimiento: "220 km/galón", colores: "Negro/Rojo, Azul, Negro total", frenos: "Tambor delantero y trasero", suspension: "Telescópica hidráulica", transmision: "4 velocidades", precio: "S/ 4,599", imagen: "tu_imagen.jpg"},
+                {nombre: "Bajaj Boxer 150", motor: "144.8 cc monocilíndrico", rendimiento: "180 km/galón", colores: "Negro, Rojo, Azul metálico", frenos: "Tambor CBS", suspension: "Doble amortiguador SNS", transmision: "5 velocidades", precio: "S/ 5,299", imagen: "tu_imagen.jpg"},
+                {nombre: "Honda CB125F", motor: "124 cc refrigerado por aire", rendimiento: "200 km/galón", colores: "Rojo, Negro, Blanco", frenos: "Disco del / Tambor tras", suspension: "Horquilla telescópica", transmision: "5 velocidades", precio: "S/ 6,100", imagen: "tu_imagen.jpg"},
+                {nombre: "Hero Eco 150", motor: "149.2 cc OHC", rendimiento: "175 km/galón", colores: "Negro, Azul, Rojo", frenos: "Tambor alto rendimiento", suspension: "Doble amortiguador", transmision: "5 velocidades", precio: "S/ 4,899", imagen: "tu_imagen.jpg"},
+                {nombre: "Wanxin Work 125", motor: "125 cc de carga", rendimiento: "160 km/galón", colores: "Rojo, Negro", frenos: "Tambor reforzado", suspension: "Eje de carga pesada", transmision: "4 velocidades", precio: "S/ 3,999", imagen: "tu_imagen.jpg"},
+                {nombre: "Suzuki AX4", motor: "113 cc 4 tiempos", rendimiento: "150 km/galón", colores: "Rojo, Azul, Negro", frenos: "Tambor mecánico", suspension: "Convencional suave", transmision: "4 velocidades", precio: "S/ 4,200", imagen: "tu_imagen.jpg"}
             ],
             "callejero": [
-                {nombre: "Yamaha FZ-S Fi V3", motor: "149 cc Blue Core", frenos: "Disco lobulado con ABS", suspension: "Horquilla de 41mm", rendimiento: "140 km/galón", transmision: "5 velocidades", precio: "S/ 9,499"},
-                {nombre: "Pulsar NS 160", motor: "160.3 cc DTS-i 4V", frenos: "Doble disco ABS", suspension: "Monoshock central", rendimiento: "135 km/galón", transmision: "5 velocidades", precio: "S/ 8,299"},
-                {nombre: "Honda CB 190R", motor: "184.4 cc PGM-FI", frenos: "Discos lobulados del/tras", suspension: "Horquilla invertida", rendimiento: "130 km/galón", transmision: "5 velocidades", precio: "S/ 10,500"},
-                {nombre: "CFMOTO 150NK", motor: "149.4 cc líquido", frenos: "J.Juan hidráulicos ABS", suspension: "Invertida delantera", rendimiento: "125 km/galón", transmision: "6 velocidades", precio: "S/ 9,990"},
-                {nombre: "KTM Duke 200", motor: "199.5 cc inyección", frenos: "ByBre con ABS", suspension: "WP Apex Invertida", rendimiento: "120 km/galón", transmision: "6 velocidades", precio: "S/ 14,500"},
-                {nombre: "Suzuki Gixxer 150", motor: "155 cc SEP", frenos: "Disco en ambas ruedas", suspension: "Telescópica hidráulica", rendimiento: "145 km/galón", transmision: "5 velocidades", precio: "S/ 8,990"}
+                {nombre: "Yamaha FZ-S Fi V3", motor: "149 cc Blue Core", rendimiento: "140 km/galón", colores: "Azul Racing, Negro Mate, Gris", frenos: "Disco lobulado con ABS", suspension: "Horquilla de 41mm", transmision: "5 velocidades", precio: "S/ 9,499", imagen: "tu_imagen.jpg"},
+                {nombre: "Pulsar NS 160", motor: "160.3 cc DTS-i 4V", rendimiento: "135 km/galón", colores: "Blanco perla, Negro carbono, Rojo", frenos: "Doble disco ABS", suspension: "Monoshock central", transmision: "5 velocidades", precio: "S/ 8,299", imagen: "tu_imagen.jpg"},
+                {nombre: "Honda CB 190R", motor: "184.4 cc PGM-FI", rendimiento: "130 km/galón", colores: "Rojo insignia, Negro mate, Repsol", frenos: "Discos lobulados", suspension: "Horquilla invertida", transmision: "5 velocidades", precio: "S/ 10,500", imagen: "tu_imagen.jpg"},
+                {nombre: "CFMOTO 150NK", motor: "149.4 cc líquido", rendimiento: "125 km/galón", colores: "Azul eléctrico, Plata, Negro", frenos: "J.Juan hidráulicos ABS", suspension: "Invertida delantera", transmision: "6 velocidades", precio: "S/ 9,990", imagen: "tu_imagen.jpg"},
+                {nombre: "KTM Duke 200", motor: "199.5 cc inyección", rendimiento: "120 km/galón", colores: "Naranja KTM, Negro oscuro", frenos: "ByBre con ABS", suspension: "WP Apex Invertida", transmision: "6 velocidades", precio: "S/ 14,500", imagen: "tu_imagen.jpg"},
+                {nombre: "Suzuki Gixxer 150", motor: "155 cc SEP", rendimiento: "145 km/galón", colores: "Azul Suzuki MotoGP, Negro", frenos: "Disco en ambas ruedas", suspension: "Telescópica", transmision: "5 velocidades", precio: "S/ 8,990", imagen: "tu_imagen.jpg"}
             ],
             "ejecutivo": [
-                {nombre: "Vespa Primavera 125", motor: "124 cc iGet", frenos: "Disco con ABS", suspension: "Monobrazo muelle helicoidal", rendimiento: "130 km/galón", transmision: "Automática CVT", precio: "S/ 16,500"},
-                {nombre: "Honda Elite 125", motor: "124.9 cc PGM-FI", frenos: "CBS Combinado", suspension: "Horquilla telescópica", rendimiento: "150 km/galón", transmision: "Automática V-Matic", precio: "S/ 8,400"},
-                {nombre: "Yamaha RayZR 125", motor: "125 cc Hybrid", frenos: "Unificado UBS", suspension: "Telescópica", rendimiento: "160 km/galón", transmision: "Automática CVT", precio: "S/ 7,990"},
-                {nombre: "Keeway Cityblade 150", motor: "150 cc refrigerado aire", frenos: "Disco lobulado CBS", suspension: "Doble amortiguador", rendimiento: "125 km/galón", transmision: "Automática CVT", precio: "S/ 6,800"},
-                {nombre: "Suzuki Burgman Street", motor: "124 cc fuel injection", frenos: "Disco delantero CBS", suspension: "Delantera telescópica", rendimiento: "145 km/galón", transmision: "Automática", precio: "S/ 8,999"},
-                {nombre: "Hero Dash 125", motor: "124.6 cc i3s", frenos: "Tambor y disco", suspension: "Brazo basculante", rendimiento: "140 km/galón", transmision: "Automática", precio: "S/ 6,500"}
+                {nombre: "Vespa Primavera 125", motor: "124 cc iGet", rendimiento: "130 km/galón", colores: "Blanco innocenza, Rojo, Verde", frenos: "Disco con ABS", suspension: "Monobrazo helicoidal", transmision: "Automática CVT", precio: "S/ 16,500", imagen: "tu_imagen.jpg"},
+                {nombre: "Honda Elite 125", motor: "124.9 cc PGM-FI", rendimiento: "150 km/galón", colores: "Negro, Blanco, Azul", frenos: "CBS Combinado", suspension: "Telescópica", transmision: "Automática V-Matic", precio: "S/ 8,400", imagen: "tu_imagen.jpg"},
+                {nombre: "Yamaha RayZR 125", motor: "125 cc Hybrid", rendimiento: "160 km/galón", colores: "Negro mate, Azul cian", frenos: "Unificado UBS", suspension: "Telescópica", transmision: "Automática CVT", precio: "S/ 7,990", imagen: "tu_imagen.jpg"},
+                {nombre: "Keeway Cityblade 150", motor: "150 cc refrigerado aire", rendimiento: "125 km/galón", colores: "Blanco, Gris oscuro, Rojo", frenos: "Disco lobulado CBS", suspension: "Doble amortiguador", transmision: "Automática CVT", precio: "S/ 6,800", imagen: "tu_imagen.jpg"},
+                {nombre: "Suzuki Burgman Street", motor: "124 cc fuel injection", rendimiento: "145 km/galón", colores: "Blanco perla, Negro mate", frenos: "Disco delantero CBS", suspension: "Telescópica", transmision: "Automática", precio: "S/ 8,999", imagen: "tu_imagen.jpg"},
+                {nombre: "Hero Dash 125", motor: "124.6 cc i3s", rendimiento: "140 km/galón", colores: "Rojo, Negro, Plata", frenos: "Tambor y disco", suspension: "Brazo basculante", transmision: "Automática", precio: "S/ 6,500", imagen: "tu_imagen.jpg"}
             ],
             "aventurero": [
-                {nombre: "Outland 1250 X", motor: "1250 cc bicilíndrico V", frenos: "Brembo ABS Doble Canal", suspension: "Electrónica semi-activa", rendimiento: "65 km/galón", transmision: "6 velocidades", precio: "S/ 45,500"},
-                {nombre: "Royal Enfield Himalayan 450", motor: "452 cc Sherpa líquido", frenos: "Disco ABS desconectable", suspension: "Invertida Showa 43mm", rendimiento: "95 km/galón", transmision: "6 velocidades", precio: "S/ 24,500"},
-                {nombre: "Honda CB500X", motor: "471 cc bicilíndrico", frenos: "Doble disco ABS", suspension: "Invertida Showa SFF-BP", rendimiento: "85 km/galón", transmision: "6 velocidades", precio: "S/ 31,900"},
-                {nombre: "KTM 390 Adventure", motor: "373.2 cc monocilíndrico", frenos: "ByBre con ABS Off-Road", suspension: "WP APEX ajustable", rendimiento: "90 km/galón", transmision: "6 velocidades", precio: "S/ 28,500"},
-                {nombre: "Suzuki V-Strom 250 SX", motor: "249 cc SOCS", frenos: "Disco lobulado con ABS", suspension: "Telescópica largo recorrido", rendimiento: "110 km/galón", transmision: "6 velocidades", precio: "S/ 18,900"},
-                {nombre: "CFMOTO 450MT", motor: "449 cc bicilíndrico", frenos: "J.Juan con ABS Bosch", suspension: "KYB ajustables", rendimiento: "88 km/galón", transmision: "6 velocidades", precio: "S/ 26,900"}
+                {nombre: "Outland 1250 X", motor: "1250 cc bicilíndrico V", rendimiento: "65 km/galón", colores: "Verde militar, Negro titanio", frenos: "Brembo ABS Doble Canal", suspension: "Electrónica semi-activa", transmision: "6 velocidades", precio: "S/ 45,500", imagen: "tu_imagen.jpg"},
+                {nombre: "Royal Enfield Himalayan 450", motor: "452 cc Sherpa líquido", rendimiento: "95 km/galón", colores: "Kaza Brown, Slate Salt", frenos: "Disco ABS desconectable", suspension: "Invertida Showa 43mm", transmision: "6 velocidades", precio: "S/ 24,500", imagen: "tu_imagen.jpg"},
+                {nombre: "Honda CB500X", motor: "471 cc bicilíndrico", rendimiento: "85 km/galón", colores: "Rojo Grand Prix, Negro mate", frenos: "Doble disco ABS", suspension: "Invertida Showa SFF-BP", transmision: "6 velocidades", precio: "S/ 31,900", imagen: "tu_imagen.jpg"},
+                {nombre: "KTM 390 Adventure", motor: "373.2 cc monocilíndrico", rendimiento: "90 km/galón", colores: "Naranja/Negro", frenos: "ByBre con ABS Off-Road", suspension: "WP APEX ajustable", transmision: "6 velocidades", precio: "S/ 28,500", imagen: "tu_imagen.jpg"},
+                {nombre: "Suzuki V-Strom 250 SX", motor: "249 cc SOCS", rendimiento: "110 km/galón", colores: "Amarillo championship, Negro", frenos: "Disco lobulado con ABS", suspension: "Telescópica largo recorrido", transmision: "6 velocidades", precio: "S/ 18,900", imagen: "tu_imagen.jpg"},
+                {nombre: "CFMOTO 450MT", motor: "449 cc bicilíndrico", rendimiento: "88 km/galón", colores: "Zephyr Blue, Tundra Grey", frenos: "J.Juan con ABS Bosch", suspension: "KYB ajustables", transmision: "6 velocidades", precio: "S/ 26,900", imagen: "tu_imagen.jpg"}
             ],
             "deluxe": [
-                {nombre: "Royal Enfield Classic 350", motor: "349 cc J-series", frenos: "Doble canal ABS", suspension: "Horquilla convencional", rendimiento: "95 km/galón", transmision: "5 velocidades", precio: "S/ 21,500"},
-                {nombre: "Honda Rebel 300", motor: "286 cc DOHC", frenos: "Disco hidráulico ABS", suspension: "Doble amortiguador", rendimiento: "100 km/galón", transmision: "6 velocidades", precio: "S/ 22,900"},
-                {nombre: "Benelli Imperiale 400", motor: "374 cc monocilíndrico", frenos: "Disco con ABS", suspension: "Telescópica clásica", rendimiento: "90 km/galón", transmision: "5 velocidades", precio: "S/ 19,500"},
-                {nombre: "Kawasaki Eliminator 500", motor: "451 cc bicilíndrico", frenos: "ABS avanzado", suspension: "Confort de ruta", rendimiento: "85 km/galón", transmision: "6 velocidades", precio: "S/ 29,500"},
-                {nombre: "Keeway V-Cruise 125", motor: "125 cc V-twin", frenos: "CBS frenada combinada", suspension: "Horquilla invertida", rendimiento: "110 km/galón", transmision: "5 velocidades", precio: "S/ 13,900"},
-                {nombre: "Zontes 350G", motor: "348 cc alta gama", frenos: "J.Juan con ABS", suspension: "Ajustable electrónica", rendimiento: "95 km/galón", transmision: "6 velocidades", precio: "S/ 23,500"}
+                {nombre: "Royal Enfield Classic 350", motor: "349 cc J-series", rendimiento: "95 km/galón", colores: "Halcyon Black, Gunmetal Grey", frenos: "Doble canal ABS", suspension: "Horquilla convencional", transmision: "5 velocidades", precio: "S/ 21,500", imagen: "tu_imagen.jpg"},
+                {nombre: "Honda Rebel 300", motor: "286 cc DOHC", rendimiento: "100 km/galón", colores: "Matte Armored Green, Negro", frenos: "Disco hidráulico ABS", suspension: "Doble amortiguador", transmision: "6 velocidades", precio: "S/ 22,900", imagen: "tu_imagen.jpg"},
+                {nombre: "Benelli Imperiale 400", motor: "374 cc monocilíndrico", rendimiento: "90 km/galón", colores: "Negro brillante, Cromo/Negro", frenos: "Disco con ABS", suspension: "Telescópica clásica", transmision: "5 velocidades", precio: "S/ 19,500", imagen: "tu_imagen.jpg"},
+                {nombre: "Kawasaki Eliminator 500", motor: "451 cc bicilíndrico", rendimiento: "85 km/galón", colores: "Metallic Flat Spark Black", frenos: "ABS avanzado", suspension: "Confort de ruta", transmision: "6 velocidades", precio: "S/ 29,500", imagen: "tu_imagen.jpg"},
+                {nombre: "Keeway V-Cruise 125", motor: "125 cc V-twin", rendimiento: "110 km/galón", colores: "Negro mate con detalles plata", frenos: "CBS frenada combinada", suspension: "Horquilla invertida", transmision: "5 velocidades", precio: "S/ 13,900", imagen: "tu_imagen.jpg"},
+                {nombre: "Zontes 350G", motor: "348 cc alta gama", rendimiento: "95 km/galón", colores: "Plata titanio, Negro carbono", frenos: "J.Juan con ABS", suspension: "Ajustable electrónica", transmision: "6 velocidades", precio: "S/ 23,500", imagen: "tu_imagen.jpg"}
             ],
             "deportivo": [
-                {nombre: "Vulcan 1100 R", motor: "1100 cc Superbike", frenos: "Brembo M50 radial ABS", suspension: "Öhlins presurizada", rendimiento: "55 km/galón", transmision: "6 velocidades Quickshifter", precio: "S/ 29,990"},
-                {nombre: "APEX 890 RS", motor: "889 cc Hypernaked", frenos: "Doble disco flotante ABS", suspension: "WP Apex competición", rendimiento: "70 km/galón", transmision: "6 velocidades", precio: "S/ 42,150"},
-                {nombre: "Yamaha R3", motor: "321 cc bicilíndrico", frenos: "Disco hidráulico ABS", suspension: "Horquilla invertida", rendimiento: "85 km/galón", transmision: "6 velocidades", precio: "S/ 25,990"},
-                {nombre: "Kawasaki Ninja 400", motor: "399 cc 4 tiempos", frenos: "Disco lobulado 310mm", suspension: "Telescópica 41mm", rendimiento: "80 km/galón", transmision: "6 velocidades", precio: "S/ 27,500"},
-                {nombre: "KTM RC 390", motor: "373.2 cc ultra deportivo", frenos: "ByBre Supermoto ABS", suspension: "WP APEX abierta", rendimiento: "82 km/galón", transmision: "6 velocidades antirrebote", precio: "S/ 26,500"},
-                {nombre: "Honda CBR 500R", motor: "471 cc bicilíndrico", frenos: "Doble disco delantero ABS", suspension: "Showa SFF-BP invertida", rendimiento: "78 km/galón", transmision: "6 velocidades", precio: "S/ 32,500"}
+                {nombre: "Vulcan 1100 R", motor: "1100 cc Superbike", rendimiento: "55 km/galón", colores: "Negro medianoche / Rojo competición", frenos: "Brembo M50 radial ABS", suspension: "Öhlins presurizada", transmision: "6 velocidades Quickshifter", precio: "S/ 29,990", imagen: "tu_imagen.jpg"},
+                {nombre: "APEX 890 RS", motor: "889 cc Hypernaked", rendimiento: "70 km/galón", colores: "Negro carbono / Rojo acento", frenos: "Doble disco flotante ABS", suspension: "WP Apex competición", transmision: "6 velocidades", precio: "S/ 42,150", imagen: "tu_imagen.jpg"},
+                {nombre: "Yamaha R3", motor: "321 cc bicilíndrico", rendimiento: "85 km/galón", colores: "Icon Blue, Midnight Black", frenos: "Disco hidráulico ABS", suspension: "Horquilla invertida", transmision: "6 velocidades", precio: "S/ 25,990", imagen: "tu_imagen.jpg"},
+                {nombre: "Kawasaki Ninja 400", motor: "399 cc 4 tiempos", rendimiento: "80 km/galón", colores: "Lime Green KRT, Negro", frenos: "Disco lobulado 310mm", suspension: "Telescópica 41mm", transmision: "6 velocidades", precio: "S/ 27,500", imagen: "tu_imagen.jpg"},
+                {nombre: "KTM RC 390", motor: "373.2 cc ultra deportivo", rendimiento: "82 km/galón", colores: "Factory Orange, Negro", frenos: "ByBre Supermoto ABS", suspension: "WP APEX abierta", transmision: "6 velocidades antirrebote", precio: "S/ 26,500", imagen: "tu_imagen.jpg"},
+                {nombre: "Honda CBR 500R", motor: "471 cc bicilíndrico", rendimiento: "78 km/galón", colores: "Matte Gunpowder Black, Rojo", frenos: "Doble disco delantero ABS", suspension: "Showa SFF-BP invertida", transmision: "6 velocidades", precio: "S/ 32,500", imagen: "tu_imagen.jpg"}
             ]
         };
 
@@ -346,7 +350,9 @@
                 const card = document.createElement("article");
                 card.className = "card-producto";
                 card.innerHTML = `
-                    <div class="card-img" style="background: linear-gradient(135deg, #1f242d, #111318);"></div>
+                    <div class="card-img">
+                        <img src="${moto.imagen}" alt="${moto.nombre}">
+                    </div>
                     <div class="card-body">
                         <span class="categoria">${estiloKey.toUpperCase()}</span>
                         <h3>${moto.nombre}</h3>
@@ -355,10 +361,16 @@
                         </div>
                         <div class="card-footer">
                             <div><small>Precio desde</small><br><strong>${moto.precio}</strong></div>
-                            <button class="btn-icon" onclick='abrirModal(${JSON.stringify(moto)}, "${estiloKey}")'>Ver Detalle &rarr;</button>
+                            <button class="btn-icon btn-ver-detalle">Ver Detalle &rarr;</button>
                         </div>
                     </div>
                 `;
+                
+                // Vinculación segura del evento click sin errores de comillas
+                card.querySelector('.btn-ver-detalle').addEventListener('click', () => {
+                    abrirModal(moto, estiloKey);
+                });
+
                 contenedorGrid.appendChild(card);
             });
 
@@ -369,9 +381,10 @@
             document.getElementById("modal-titulo").innerText = moto.nombre;
             document.getElementById("modal-estilo").innerText = estilo.toUpperCase();
             document.getElementById("modal-motor").innerText = moto.motor;
+            document.getElementById("modal-rendimiento").innerText = moto.rendimiento;
+            document.getElementById("modal-colores").innerText = moto.colores;
             document.getElementById("modal-frenos").innerText = moto.frenos;
             document.getElementById("modal-suspension").innerText = moto.suspension;
-            document.getElementById("modal-rendimiento").innerText = moto.rendimiento;
             document.getElementById("modal-transmision").innerText = moto.transmision;
             document.getElementById("modal-precio").innerText = moto.precio;
 
