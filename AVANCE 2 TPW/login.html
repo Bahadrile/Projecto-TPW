@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión | Motos y Motos</title>
+    <!-- Fuentes Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Iconos Material Symbols / FontAwesome -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Hoja de Estilos Externa -->
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+
+    <!-- CABECERA DE NAVEGACIÓN -->
+    <header class="cabecera">
+        <div class="logo">
+            <a href="index.html" style="display: flex; align-items: center; gap: 10px;">
+                <span class="symbol-logo">&#215;</span>
+                <div>
+                    <h2>MOTOS Y MOTOS</h2>
+                    <small>PREMIUM MOTORSPORT</small>
+                </div>
+            </a>
+        </div>
+        <nav class="menu">
+            <a href="index.html#inicio">Inicio</a>
+            <a href="index.html#nosotros">Nosotros</a>
+            <a href="index.html#estilos">Productos y servicios</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        <div class="acciones-header">
+            <span class="soporte">Soporte 24/7</span>
+            <a href="login.html" class="boton-acento">INGRESAR</a>
+        </div>
+    </header>
+
+    <main
+        style="min-height: 80vh; display: flex; align-items: center; justify-content: center; padding: 60px 20px; background-color: #0b0c10;">
+        <div class="contacto-form-card" style="width: 100%; max-width: 440px;">
+            <div style="text-align: center; margin-bottom: 24px;">
+                <span class="subtitulo">— ACCESO DE USUARIO</span>
+                <h2 style="font-size: 28px; font-weight: 900; margin-top: 8px;">BIENVENIDO DE NUEVO</h2>
+                <p class="form-subtext">Ingresa a tu cuenta institucional o cliente para gestionar tus servicios y
+                    cotizaciones.</p>
+            </div>
+
+            <form>
+                <div class="form-group-full" style="margin-bottom: 16px;">
+                    <label for="correo">CORREO ELECTRÓNICO</label>
+                    <input id="correo" type="email" placeholder="usuario@motosymotos.pe" required>
+                </div>
+
+                <div class="form-group-full" style="margin-bottom: 20px;">
+                    <label for="clave">CONTRASEÑA</label>
+                    <input id="clave" type="password" placeholder="••••••••" required>
+                </div>
+
+                <div
+                    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; font-size: 12px; color: #9a9ea8;">
+                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; margin-bottom: 0;">
+                        <input type="checkbox" style="width: auto;"> Recordarme
+                    </label>
+                    <a href="#" style="color: #ccff00; text-decoration: none;">¿Olvidaste tu contraseña?</a>
+                </div>
+
+                <button type="submit" class="boton-acento btn-block">INICIAR SESIÓN &rarr;</button>
+            </form>
+
+            <div style="text-align: center; margin-top: 24px; font-size: 13px; color: #7a7f8a;">
+                ¿Aún no tienes una cuenta? <a href="#" style="color: #ccff00; font-weight: 700;">Regístrate aquí</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="pie-pagina">
+        <div class="footer-grid">
+            <div class="footer-col-brand">
+                <div class="logo logo-footer">
+                    <span class="symbol-logo">&#215;</span>
+                    <div>
+                        <h2>MOTOS Y MOTOS</h2>
+                    </div>
+                </div>
+                <p class="footer-desc">La distribuidora y servicio técnico de motocicletas deportivas más influyente del
+                    panorama motorsport premium.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>NAVEGACIÓN</h4>
+                <ul>
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="index.html#estilos">Catálogo</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>SERVICIOS</h4>
+                <ul>
+                    <li><a href="#">Mantenimiento Oficial</a></li>
+                    <li><a href="#">Suspensión Pro</a></li>
+                    <li><a href="#">ECU Remap</a></li>
+                    <li><a href="#">Telemetría Track</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>HORARIOS</h4>
+                <p><strong>Lunes a Viernes</strong><br>08:30 AM - 19:30 PM</p>
+                <br>
+                <p><strong>Sábados (Showroom)</strong><br>09:00 AM - 14:00 PM</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
