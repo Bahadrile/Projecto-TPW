@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motos y Motos | Premium Motorsport</title>
+    <!-- Fuentes Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Iconos Material Symbols / FontAwesome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- CABECERA DE NAVEGACIÓN -->
+    <header class="cabecera">
+        <div class="logo">
+            <span class="symbol-logo">&#215;</span>
+            <div>
+                <h2>MOTOS Y MOTOS</h2>
+                <small>PREMIUM MOTORSPORT</small>
+            </div>
+        </div>
+        <nav class="menu">
+            <a href="#inicio" class="activo">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#estilos">Productos y servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="acciones-header">
+            <span class="soporte">Soporte 24/7</span>
+            <a href="#contacto" class="boton-acento">AGENDAR TEST</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECCIÓN HERO / INICIO -->
+        <section id="inicio" class="hero">
+            <div class="hero-contenido">
+                <span class="tagline">NUEVA COLECCIÓN RACING 2026 DISPONIBLE</span>
+                <h1>DOMINA LA<br>PISTA Y LA CALLE</h1>
+                <p>Rendimiento implacable, tecnología de competición y el rugido de la ingeniería de precisión. Descubre el catálogo más exclusivo de motocicletas deportivas, hipernakeds y de aventura.</p>
+                <div class="hero-botones">
+                    <a href="#estilos" class="boton-acento">VER CATÁLOGO &rarr;</a>
+                    <a href="#contacto" class="boton-secundario">SERVICIOS TALLER</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><h3>+45</h3><p>Modelos Exclusivos</p></div>
+                    <div class="stat"><h3>99.4%</h3><p>Clientes Satisfechos</p></div>
+                    <div class="stat"><h3>24h</h3><p>Soporte Oficial</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN NOSOTROS (Con la nueva imagen de repuestos y piezas de moto) -->
+        <section id="nosotros" class="nosotros">
+            <div class="nosotros-grid">
+                <div class="nosotros-imagenes">
+                    <div class="img-box gran-exhibicion">
+                        <!-- Imagen actualizada de piezas y repuestos mecánicos -->
+                        <img src="repuestos.PNG" alt="Repuestos y piezas mecánicas de motocicletas">
+                    </div>
+                    <div class="columna-sub-imagenes">
+                        <div class="img-box sub-img">
+                            <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=600&q=80" alt="Suspensión de competición">
+                        </div>
+                        <div class="img-box sub-img">
+                            <img src="https://carroemotos.com.br/wp-content/uploads/2024/07/zx102.jpg" alt="Equipamiento y casco AGV">
+                        </div>
+                    </div>
+                </div>
+                <div class="nosotros-texto">
+                    <span class="subtitulo">— NOSOTROS</span>
+                    <h2>PASIÓN POR LAS DOS RUEDAS E INGENIERÍA DE VANGUARDIA</h2>
+                    <p>En Motos y motos no solo vendemos máquinas, entregamos experiencias definitivas de velocidad y control. Con más de 15 años liderando el mercado motorsport premium, somos el punto de encuentro de los entusiastas del asfalto.</p>
+                    <p class="parrafo-secundario">Nuestro compromiso va más allá de la entrega de llaves. Proveemos soporte técnico certificado por marcas mundiales, catálogo completo de repuestos técnicos originales, telemetría avanzada y un equipo humano forjado en las pistas.</p>
+                    
+                    <ul class="lista-check">
+                        <li><span class="material-symbols-outlined check">check</span> Únicos distribuidores oficiales con zona de test de pista privada.</li>
+                        <li><span class="material-symbols-outlined check">check</span> Especialistas en superbikes de competición e hipernakeds de edición limitada.</li>
+                        <li><span class="material-symbols-outlined check">check</span> Taller de alto rendimiento equipado con sistemas de diagnosis computarizada.</li>
+                    </ul>
+                    <a href="#contacto" class="boton-acento btn-nosotros">CONOCE EL CLUB &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN BUSCA TU MOTO POR ESTILO -->
+        <section id="estilos" class="seccion-estilos">
+            <div class="titulo-estilos">
+                <h2>BUSCA TU MOTO POR <span class="resaltado-amarillo">ESTILO</span></h2>
+            </div>
+            <div class="grid-estilos">
+                <div class="card-estilo bg-chamba" onclick="filtrarEstilo('full-chamba')">
+                    <div class="overlay">
+                        <h3>FULL CHAMBA</h3>
+                        <p>Máxima economía para largas jornadas</p>
+                    </div>
+                </div>
+                <div class="card-estilo bg-callejero" onclick="filtrarEstilo('callejero')">
+                    <div class="overlay">
+                        <h3>CALLEJERO</h3>
+                        <p>El tráfico no existe para ti</p>
+                    </div>
+                </div>
+                <div class="card-estilo bg-ejecutivo" onclick="filtrarEstilo('ejecutivo')">
+                    <div class="overlay">
+                        <h3>EJECUTIVO</h3>
+                        <p>Movilízate cómodamente sin problemas</p>
+                    </div>
+                </div>
+                <div class="card-estilo bg-aventurero" onclick="filtrarEstilo('aventurero')">
+                    <div class="overlay">
+                        <h3>AVENTURERO</h3>
+                        <p>Para los que hacen terapia en la ruta</p>
+                    </div>
+                </div>
+                <div class="card-estilo bg-deluxe" onclick="filtrarEstilo('deluxe')">
+                    <div class="overlay">
+                        <h3>DELUXE</h3>
+                        <p>Vayas donde vayas tu estilo va contigo</p>
+                    </div>
+                </div>
+                <div class="card-estilo bg-deportivo" onclick="filtrarEstilo('deportivo')">
+                    <div class="overlay">
+                        <h3>DEPORTIVO</h3>
+                        <p>Sé el primero en llegar a todos lados</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATÁLOGO RESULTADOS DINÁMICOS -->
+        <section id="catalogo-motos" class="catalogo-contenedor">
+            <h2 id="titulo-categoria-seleccionada">Selecciona un estilo arriba para explorar 6 modelos</h2>
+            <div id="grid-motos-resultado" class="productos-grid"></div>
+        </section>
+
+        <!-- SECCIÓN CONTACTO -->
+        <section id="contacto" class="contacto">
+            <div class="contacto-grid">
+                <div class="contacto-info">
+                    <span class="subtitulo">— CONTACTO</span>
+                    <h2>ESTAMOS LISTOS PARA ESCUCHARTE</h2>
+                    <p class="contacto-desc">¿Tienes dudas sobre un modelo, opciones de financiación o necesitas agendar cita en nuestro taller técnico?</p>
+                    
+                    <div class="item-info">
+                        <div class="icon-box"><span class="material-symbols-outlined">call</span></div>
+                        <div><small>LLÁMANOS</small><strong>+51 910 234 567</strong></div>
+                    </div>
+                    
+                    <div class="item-info">
+                        <div class="icon-box"><span class="material-symbols-outlined">mail</span></div>
+                        <div><small>ESCRÍBENOS</small><strong>contacto@motosymotos.pe</strong></div>
+                    </div>
+                    
+                    <div class="item-info">
+                        <div class="icon-box"><span class="material-symbols-outlined">location_on</span></div>
+                        <div><small>DIRECCIÓN CENTRAL</small><strong>Av. Paseo de la Republica, 3361 - Lima</strong></div>
+                    </div>
+
+                    <!-- Cuadro del Mapa -->
+                    <div class="mapa-box">
+                        <div class="mapa-img-placeholder">
+                            <span class="pin-mapa"><span class="material-symbols-outlined">location_on</span></span>
+                            <div class="mapa-label">Avenida Paseo de la Republica, 3361</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <div class="contacto-form-card">
+                    <h3>ENVIAR MENSAJE DIRECTO</h3>
+                    <p class="form-subtext">Nuestro equipo motorsport responderá a tu solicitud en menos de 2 horas hábiles.</p>
+                    <form>
+                        <div class="form-row">
+                            <div>
+                                <label for="nombre">NOMBRE COMPLETO</label>
+                                <input id="nombre" type="text" placeholder="Ej. Juan Pérez">
+                            </div>
+                            <div>
+                                <label for="email">CORREO ELECTRÓNICO</label>
+                                <input id="email" type="email" placeholder="juan@ejemplo.com">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div>
+                                <label for="telefono">TELÉFONO</label>
+                                <input id="telefono" type="tel" placeholder="+51 987 654 321">
+                            </div>
+                            <div>
+                                <label for="moto">MOTOCICLETA DE INTERÉS</label>
+                                <input id="moto" type="text" placeholder="Ej. Vulcan 1100 R">
+                            </div>
+                        </div>
+                        <div class="form-group-full">
+                            <label for="mensaje">TU CONSULTA O SOLICITUD</label>
+                            <textarea id="mensaje" rows="3" placeholder="Escribe detalladamente tu consulta..."></textarea>
+                        </div>
+                        <button type="submit" class="boton-acento btn-block">ENVIAR SOLICITUD &rarr;</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- VENTANA FLOTANTE (MODAL DETALLE) -->
+    <div id="modal-detalle" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
+            <h2 id="modal-titulo">Nombre de la Moto</h2>
+            <span id="modal-estilo" class="categoria">ESTILO</span>
+            <div class="modal-body-grid">
+                <div class="modal-specs-box">
+                    <h3>Ficha Técnica Detallada</h3>
+                    <p><strong>Motor:</strong> <span id="modal-motor">-</span></p>
+                    <p><strong>Frenos:</strong> <span id="modal-frenos">-</span></p>
+                    <p><strong>Suspensión:</strong> <span id="modal-suspension">-</span></p>
+                    <p><strong>Rendimiento:</strong> <span id="modal-rendimiento">-</span></p>
+                    <p><strong>Transmisión:</strong> <span id="modal-transmision">-</span></p>
+                </div>
+                <div class="modal-precio-box">
+                    <small>Precio Oficial</small>
+                    <h2 id="modal-precio" style="color: #ccff00; font-size: 28px;">S/ 0.00</h2>
+                    <a href="#contacto" onclick="cerrarModal()" class="boton-acento" style="display:block; text-align:center; margin-top:20px;">COTIZAR AHORA</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="pie-pagina">
+        <div class="footer-grid">
+            <div class="footer-col-brand">
+                <div class="logo logo-footer">
+                    <span class="symbol-logo">&#215;</span>
+                    <div>
+                        <h2>MOTOS Y MOTOS</h2>
+                    </div>
+                </div>
+                <p class="footer-desc">La distribuidora y servicio técnico de motocicletas deportivas más influyente del panorama motorsport premium. Ingeniería pura a tu servicio.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>CATEGORÍAS</h4>
+                <ul>
+                    <li><a href="#estilos" onclick="filtrarEstilo('full-chamba')">Full Chamba</a></li>
+                    <li><a href="#estilos" onclick="filtrarEstilo('callejero')">Callejero</a></li>
+                    <li><a href="#estilos" onclick="filtrarEstilo('ejecutivo')">Ejecutivo</a></li>
+                    <li><a href="#estilos" onclick="filtrarEstilo('aventurero')">Aventurero</a></li>
+                    <li><a href="#estilos" onclick="filtrarEstilo('deluxe')">Deluxe</a></li>
+                    <li><a href="#estilos" onclick="filtrarEstilo('deportivo')">Deportivo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>SERVICIOS</h4>
+                <ul>
+                    <li><a href="#">Mantenimiento Oficial</a></li>
+                    <li><a href="#">Suspensión Pro</a></li>
+                    <li><a href="#">ECU Remap</a></li>
+                    <li><a href="#">Telemetría Track</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>HORARIOS</h4>
+                <p><strong>Lunes a Viernes</strong><br>08:30 AM - 19:30 PM</p>
+                <br>
+                <p><strong>Sábados (Showroom)</strong><br>09:00 AM - 14:00 PM</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT JS -->
+    <script>
+        const baseDatosMotos = {
+            "full-chamba": [
+                {nombre: "TVS Sport 100", motor: "99.2 cc 4 tiempos", frenos: "Tambor delantero y trasero", suspension: "Telescópica hidráulica", rendimiento: "220 km/galón", transmision: "4 velocidades", precio: "S/ 4,599"},
+                {nombre: "Bajaj Boxer 150", motor: "144.8 cc monocilíndrico", frenos: "Tambor CBS", suspension: "Doble amortiguador SNS", rendimiento: "180 km/galón", transmision: "5 velocidades", precio: "S/ 5,299"},
+                {nombre: "Honda CB125F", motor: "124 cc refrigerado por aire", frenos: "Disco del / Tambor tras", suspension: "Horquilla telescópica", rendimiento: "200 km/galón", transmision: "5 velocidades", precio: "S/ 6,100"},
+                {nombre: "Hero Eco 150", motor: "149.2 cc OHC", frenos: "Tambor alto rendimiento", suspension: "Doble amortiguador", rendimiento: "175 km/galón", transmision: "5 velocidades", precio: "S/ 4,899"},
+                {nombre: "Wanxin Work 125", motor: "125 cc de carga", frenos: "Tambor reforzado", suspension: "Eje de carga pesada", rendimiento: "160 km/galón", transmision: "4 velocidades", precio: "S/ 3,999"},
+                {nombre: "Suzuki AX4", motor: "113 cc 4 tiempos", frenos: "Tambor mecánico", suspension: "Convencional suave", rendimiento: "150 km/galón", transmision: "4 velocidades", precio: "S/ 4,200"}
+            ],
+            "callejero": [
+                {nombre: "Yamaha FZ-S Fi V3", motor: "149 cc Blue Core", frenos: "Disco lobulado con ABS", suspension: "Horquilla de 41mm", rendimiento: "140 km/galón", transmision: "5 velocidades", precio: "S/ 9,499"},
+                {nombre: "Pulsar NS 160", motor: "160.3 cc DTS-i 4V", frenos: "Doble disco ABS", suspension: "Monoshock central", rendimiento: "135 km/galón", transmision: "5 velocidades", precio: "S/ 8,299"},
+                {nombre: "Honda CB 190R", motor: "184.4 cc PGM-FI", frenos: "Discos lobulados del/tras", suspension: "Horquilla invertida", rendimiento: "130 km/galón", transmision: "5 velocidades", precio: "S/ 10,500"},
+                {nombre: "CFMOTO 150NK", motor: "149.4 cc líquido", frenos: "J.Juan hidráulicos ABS", suspension: "Invertida delantera", rendimiento: "125 km/galón", transmision: "6 velocidades", precio: "S/ 9,990"},
+                {nombre: "KTM Duke 200", motor: "199.5 cc inyección", frenos: "ByBre con ABS", suspension: "WP Apex Invertida", rendimiento: "120 km/galón", transmision: "6 velocidades", precio: "S/ 14,500"},
+                {nombre: "Suzuki Gixxer 150", motor: "155 cc SEP", frenos: "Disco en ambas ruedas", suspension: "Telescópica hidráulica", rendimiento: "145 km/galón", transmision: "5 velocidades", precio: "S/ 8,990"}
+            ],
+            "ejecutivo": [
+                {nombre: "Vespa Primavera 125", motor: "124 cc iGet", frenos: "Disco con ABS", suspension: "Monobrazo muelle helicoidal", rendimiento: "130 km/galón", transmision: "Automática CVT", precio: "S/ 16,500"},
+                {nombre: "Honda Elite 125", motor: "124.9 cc PGM-FI", frenos: "CBS Combinado", suspension: "Horquilla telescópica", rendimiento: "150 km/galón", transmision: "Automática V-Matic", precio: "S/ 8,400"},
+                {nombre: "Yamaha RayZR 125", motor: "125 cc Hybrid", frenos: "Unificado UBS", suspension: "Telescópica", rendimiento: "160 km/galón", transmision: "Automática CVT", precio: "S/ 7,990"},
+                {nombre: "Keeway Cityblade 150", motor: "150 cc refrigerado aire", frenos: "Disco lobulado CBS", suspension: "Doble amortiguador", rendimiento: "125 km/galón", transmision: "Automática CVT", precio: "S/ 6,800"},
+                {nombre: "Suzuki Burgman Street", motor: "124 cc fuel injection", frenos: "Disco delantero CBS", suspension: "Delantera telescópica", rendimiento: "145 km/galón", transmision: "Automática", precio: "S/ 8,999"},
+                {nombre: "Hero Dash 125", motor: "124.6 cc i3s", frenos: "Tambor y disco", suspension: "Brazo basculante", rendimiento: "140 km/galón", transmision: "Automática", precio: "S/ 6,500"}
+            ],
+            "aventurero": [
+                {nombre: "Outland 1250 X", motor: "1250 cc bicilíndrico V", frenos: "Brembo ABS Doble Canal", suspension: "Electrónica semi-activa", rendimiento: "65 km/galón", transmision: "6 velocidades", precio: "S/ 45,500"},
+                {nombre: "Royal Enfield Himalayan 450", motor: "452 cc Sherpa líquido", frenos: "Disco ABS desconectable", suspension: "Invertida Showa 43mm", rendimiento: "95 km/galón", transmision: "6 velocidades", precio: "S/ 24,500"},
+                {nombre: "Honda CB500X", motor: "471 cc bicilíndrico", frenos: "Doble disco ABS", suspension: "Invertida Showa SFF-BP", rendimiento: "85 km/galón", transmision: "6 velocidades", precio: "S/ 31,900"},
+                {nombre: "KTM 390 Adventure", motor: "373.2 cc monocilíndrico", frenos: "ByBre con ABS Off-Road", suspension: "WP APEX ajustable", rendimiento: "90 km/galón", transmision: "6 velocidades", precio: "S/ 28,500"},
+                {nombre: "Suzuki V-Strom 250 SX", motor: "249 cc SOCS", frenos: "Disco lobulado con ABS", suspension: "Telescópica largo recorrido", rendimiento: "110 km/galón", transmision: "6 velocidades", precio: "S/ 18,900"},
+                {nombre: "CFMOTO 450MT", motor: "449 cc bicilíndrico", frenos: "J.Juan con ABS Bosch", suspension: "KYB ajustables", rendimiento: "88 km/galón", transmision: "6 velocidades", precio: "S/ 26,900"}
+            ],
+            "deluxe": [
+                {nombre: "Royal Enfield Classic 350", motor: "349 cc J-series", frenos: "Doble canal ABS", suspension: "Horquilla convencional", rendimiento: "95 km/galón", transmision: "5 velocidades", precio: "S/ 21,500"},
+                {nombre: "Honda Rebel 300", motor: "286 cc DOHC", frenos: "Disco hidráulico ABS", suspension: "Doble amortiguador", rendimiento: "100 km/galón", transmision: "6 velocidades", precio: "S/ 22,900"},
+                {nombre: "Benelli Imperiale 400", motor: "374 cc monocilíndrico", frenos: "Disco con ABS", suspension: "Telescópica clásica", rendimiento: "90 km/galón", transmision: "5 velocidades", precio: "S/ 19,500"},
+                {nombre: "Kawasaki Eliminator 500", motor: "451 cc bicilíndrico", frenos: "ABS avanzado", suspension: "Confort de ruta", rendimiento: "85 km/galón", transmision: "6 velocidades", precio: "S/ 29,500"},
+                {nombre: "Keeway V-Cruise 125", motor: "125 cc V-twin", frenos: "CBS frenada combinada", suspension: "Horquilla invertida", rendimiento: "110 km/galón", transmision: "5 velocidades", precio: "S/ 13,900"},
+                {nombre: "Zontes 350G", motor: "348 cc alta gama", frenos: "J.Juan con ABS", suspension: "Ajustable electrónica", rendimiento: "95 km/galón", transmision: "6 velocidades", precio: "S/ 23,500"}
+            ],
+            "deportivo": [
+                {nombre: "Vulcan 1100 R", motor: "1100 cc Superbike", frenos: "Brembo M50 radial ABS", suspension: "Öhlins presurizada", rendimiento: "55 km/galón", transmision: "6 velocidades Quickshifter", precio: "S/ 29,990"},
+                {nombre: "APEX 890 RS", motor: "889 cc Hypernaked", frenos: "Doble disco flotante ABS", suspension: "WP Apex competición", rendimiento: "70 km/galón", transmision: "6 velocidades", precio: "S/ 42,150"},
+                {nombre: "Yamaha R3", motor: "321 cc bicilíndrico", frenos: "Disco hidráulico ABS", suspension: "Horquilla invertida", rendimiento: "85 km/galón", transmision: "6 velocidades", precio: "S/ 25,990"},
+                {nombre: "Kawasaki Ninja 400", motor: "399 cc 4 tiempos", frenos: "Disco lobulado 310mm", suspension: "Telescópica 41mm", rendimiento: "80 km/galón", transmision: "6 velocidades", precio: "S/ 27,500"},
+                {nombre: "KTM RC 390", motor: "373.2 cc ultra deportivo", frenos: "ByBre Supermoto ABS", suspension: "WP APEX abierta", rendimiento: "82 km/galón", transmision: "6 velocidades antirrebote", precio: "S/ 26,500"},
+                {nombre: "Honda CBR 500R", motor: "471 cc bicilíndrico", frenos: "Doble disco delantero ABS", suspension: "Showa SFF-BP invertida", rendimiento: "78 km/galón", transmision: "6 velocidades", precio: "S/ 32,500"}
+            ]
+        };
+
+        function filtrarEstilo(estiloKey) {
+            const contenedorGrid = document.getElementById("grid-motos-resultado");
+            const tituloCategoria = document.getElementById("titulo-categoria-seleccionada");
+            const listaMotos = baseDatosMotos[estiloKey] || [];
+            
+            tituloCategoria.innerText = `MODELOS ENCONTRADOS PARA: ${estiloKey.replace('-',' ').toUpperCase()}`;
+            contenedorGrid.innerHTML = "";
+
+            listaMotos.forEach(moto => {
+                const card = document.createElement("article");
+                card.className = "card-producto";
+                card.innerHTML = `
+                    <div class="card-img" style="background: linear-gradient(135deg, #1f242d, #111318);"></div>
+                    <div class="card-body">
+                        <span class="categoria">${estiloKey.toUpperCase()}</span>
+                        <h3>${moto.nombre}</h3>
+                        <div class="specs">
+                            <div><small>MOTOR</small><br><strong>${moto.motor}</strong></div>
+                        </div>
+                        <div class="card-footer">
+                            <div><small>Precio desde</small><br><strong>${moto.precio}</strong></div>
+                            <button class="btn-icon" onclick='abrirModal(${JSON.stringify(moto)}, "${estiloKey}")'>Ver Detalle &rarr;</button>
+                        </div>
+                    </div>
+                `;
+                contenedorGrid.appendChild(card);
+            });
+
+            document.getElementById("catalogo-motos").scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function abrirModal(moto, estilo) {
+            document.getElementById("modal-titulo").innerText = moto.nombre;
+            document.getElementById("modal-estilo").innerText = estilo.toUpperCase();
+            document.getElementById("modal-motor").innerText = moto.motor;
+            document.getElementById("modal-frenos").innerText = moto.frenos;
+            document.getElementById("modal-suspension").innerText = moto.suspension;
+            document.getElementById("modal-rendimiento").innerText = moto.rendimiento;
+            document.getElementById("modal-transmision").innerText = moto.transmision;
+            document.getElementById("modal-precio").innerText = moto.precio;
+
+            document.getElementById("modal-detalle").style.display = "flex";
+        }
+
+        function cerrarModal() {
+            document.getElementById("modal-detalle").style.display = "none";
+        }
+    </script>
+</body>
+</html>
